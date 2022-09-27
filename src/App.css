@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+/*전역
+***************/
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+  font-family: Pretendard-Regular;
+}
+.body {
+  width: 100%;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*네비게이터
+***************/
+.navigator {
+  font-size: 1.8rem;
+  width: 100%;
+  position: fixed;
+}
+.navigator ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1rem 0.5rem 0.5rem #ddd;
+}
+.navigator ul li {
+  list-style: none;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*홈
+***************/
+.home-section > div {
+  padding-top: 4.5rem;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  /* outline: 1px solid black; */
+}
+.name {
+  padding: 4rem 0;
+}
+.name h1 {
+  font-size: 3rem;
+  letter-spacing: 0.001rem;
+  color: #333;
+}
+.name h1 span {
+  font-size: 1.6rem;
+  font-variant: small-caps;
+}
+.name > span {
+  font-size: 1.3rem;
+}
+.link-box-title {
+  font-size: 2.3rem;
+  padding-bottom: 1.5rem;
+  font-variant: small-caps;
+}
+.link-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.resume {
+  font-size: 1.6rem;
+  display: block;
+  outline: 0.2rem solid #333;
+  border-radius: 1.5rem;
+  width: 30%;
+  padding: 1rem;
+}
+.resume p {
+  padding: 0.5rem;
+}
+.resume-icon {
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.github-icon {
+  width: 2rem;
+  height: 2rem;
 }
