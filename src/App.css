@@ -37,6 +37,7 @@ html {
 .navigator ul li {
   list-style: none;
   padding: 1rem;
+  cursor: default;
 }
 
 /*홈
@@ -91,8 +92,47 @@ html {
 .resume-icon {
   font-size: 2rem;
 }
-
 .github-icon {
   width: 2rem;
   height: 2rem;
+}
+
+/*이력서
+***************/
+.resume-section > div {
+  padding-top: 4.5rem;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.resume-section > div > .name {
+  width: 100%;
+}
+.resume-section > div > .name > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.resume-section > div > .name > div > h1 {
+  width: 100%;
+  box-shadow: 0 0.2rem #333;
+}
+.resume-section > div > .name > div > h2 {
+  padding-top: 0.5rem;
+}
+.picture-box {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 10rem;
+  position: relative;
+}
+#picture {
+  position: absolute;
+  width: 110%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
