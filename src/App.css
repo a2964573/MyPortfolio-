@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%;
   font-family: Pretendard-Regular;
+  color: #333;
 }
 .body {
   width: 100%;
@@ -26,6 +27,8 @@ html {
   font-size: 1.8rem;
   width: 100%;
   position: fixed;
+  background-color: #fff;
+  z-index: 99;
 }
 .navigator ul {
   display: flex;
@@ -49,19 +52,17 @@ html {
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  /* outline: 1px solid black; */
 }
 .name {
   padding: 4rem 0;
 }
 .name h1 {
   font-size: 3rem;
-  letter-spacing: 0.001rem;
-  color: #333;
 }
 .name h1 span {
   font-size: 1.6rem;
   font-variant: small-caps;
+  padding-left: 0.5rem;
 }
 .name > span {
   font-size: 1.3rem;
@@ -107,20 +108,30 @@ html {
   flex-direction: column;
   align-items: flex-start;
 }
-.resume-section > div > .name {
+.header {
   width: 100%;
+  padding-top: 5.5rem;
 }
-.resume-section > div > .name > div {
+.header > div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.resume-section > div > .name > div > h1 {
+.header > div > h1 {
   width: 100%;
   box-shadow: 0 0.2rem #333;
 }
-.resume-section > div > .name > div > h2 {
+.header > div > h2 {
   padding-top: 0.5rem;
+}
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 8rem;
+  box-shadow: 0 0.1rem #ddd;
 }
 .picture-box {
   width: 20rem;
@@ -128,11 +139,139 @@ html {
   overflow: hidden;
   border-radius: 10rem;
   position: relative;
+  outline: 0.2rem solid #333;
 }
-#picture {
+.picture-box > #picture {
   position: absolute;
   width: 110%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.license {
+  width: 30%;
+  min-height: 18rem;
+  outline: 0.2rem solid #333;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+.contact-portfolio {
+  width: 30%;
+  min-height: 18rem;
+}
+.contact,
+.portfolio {
+  width: 100%;
+  outline: 0.2rem solid #333;
+  border-radius: 2rem;
+}
+.contact {
+  margin-bottom: 3.3rem;
+}
+.contact-portfolio ul {
+  padding: 1rem 2rem;
+}
+.license h2,
+.contact-portfolio h2 {
+  font-size: 2rem;
+  background-color: #fff;
+  position: absolute;
+  transform: translate(-0.5rem, -2.5rem);
+  padding: 0 0.7rem;
+  color: cornflowerblue;
+}
+.contact-portfolio h2 {
+  transform: translate(1.5rem, -1.5rem);
+}
+.license ul li,
+.contact-portfolio ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  box-shadow: 0 0.1rem #ddd;
+}
+.license ul li h3,
+.contact-portfolio ul li h3 {
+  font-size: 1.4rem;
+}
+.license ul li span,
+.contact-portfolio ul li h3 span {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.LIST {
+  width: 100%;
+  margin-top: 5rem;
+  padding-bottom: 8rem;
+  box-shadow: 0 0.1rem #ddd;
+}
+.LIST > h2 {
+  font-size: 2rem;
+  width: 100%;
+  width: 100%;
+  box-shadow: 0 0.2rem #333;
+}
+.LIST > h2 > span {
+  font-size: 1.6rem;
+  font-variant: small-caps;
+  padding-left: 0.5rem;
+  color: cornflowerblue;
+}
+.introduce p {
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  padding: 2rem;
+  width: auto;
+}
+
+.skill ul {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.skill ul li {
+  font-size: 1.8rem;
+  list-style: none;
+  padding: 0.5rem 2rem;
+  margin-left: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.skill ul li:first-child {
+  margin-left: 0;
+}
+.markup li {
+  background-color: yellow;
+}
+.script li {
+  background-color: blue;
+  color: #fff;
+}
+.library li {
+  background-color: #333;
+  color: #fff;
+}
+
+.education li {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.education li h3,
+.education li > span {
+  font-size: 1.5rem;
+}
+.education li h3 span {
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
 }

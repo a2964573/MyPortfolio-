@@ -5,7 +5,7 @@ function Home(props) {
         <div className="name">
           <span>"꿈을 향해 점진적으로 성장하는 모코코"</span>
           <h1>
-            최 규 환 <span>Choi KyuHwan</span>
+            최 규 환<span>Choi KyuHwan</span>
           </h1>
         </div>
         <div>
