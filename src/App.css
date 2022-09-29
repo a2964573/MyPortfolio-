@@ -210,7 +210,7 @@ html {
   box-shadow: 0 0.1rem #ddd;
 }
 .LIST > h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   width: 100%;
   width: 100%;
   box-shadow: 0 0.2rem #333;
@@ -228,35 +228,97 @@ html {
   width: auto;
 }
 
+.project {
+  width: 100%;
+}
+.project div {
+  padding: 2rem;
+  width: auto;
+  box-shadow: 0 0.2rem #f5f5f5;
+}
+.project div > ul {
+  display: grid;
+  grid-template-columns: 5rem repeat(2, 1fr) 5rem;
+  grid-template-rows: 4rem 1fr;
+}
+.project div > ul > li {
+  list-style: none;
+  padding: 1rem;
+}
+.project div > ul > li:nth-child(1) {
+  font-size: 2.3rem;
+  font-weight: bolder;
+  color: lightsalmon;
+  box-shadow: 0 0.2rem #ddd;
+  grid-column-start: span 5;
+}
+.project div > ul > li:nth-child(1) span {
+  font-size: 1rem;
+  color: #333;
+  padding-left: 1rem;
+}
+.project div > ul > li:nth-child(2) {
+  grid-column-start: 2;
+  grid-row: 2 / span 2;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.project div > ul > li:nth-child(2) img {
+  width: 100%;
+}
+.project div > ul > li:nth-child(3) {
+  grid-column-start: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.project div > ul > li:nth-child(3) span:nth-child(1) p {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+}
+.project div > ul > li:nth-child(3) span:nth-child(1) p:first-child {
+  padding-top: 0;
+}
+.project div > ul > li:nth-child(3) span:nth-child(1) p > span {
+  font-size: 1.8rem;
+  padding-bottom: 0.7rem;
+  color: cornflowerblue;
+  display: block;
+}
+.project div > ul > li:nth-child(3) span:nth-child(2) {
+  font-size: 1.6rem;
+}
+.project div > ul > li:nth-child(3) span:nth-child(2) > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+}
+
 .skill ul {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-.skill ul li {
+.skill ul li,
+.project div > ul > li:nth-child(3) span:nth-child(2) > ul li {
   font-size: 1.8rem;
   list-style: none;
   padding: 0.5rem 2rem;
   margin-left: 1rem;
   border-radius: 1rem;
   text-align: center;
+  background-color: cornflowerblue;
+  color: #fff;
 }
-.skill ul li:first-child {
+.skill ul li:first-child,
+.project div > ul > li:nth-child(3) span:nth-child(2) > ul li:first-child {
   margin-left: 0;
-}
-.markup li {
-  background-color: yellow;
-}
-.script li {
-  background-color: blue;
-  color: #fff;
-}
-.library li {
-  background-color: #333;
-  color: #fff;
 }
 
 .education li {
@@ -274,4 +336,16 @@ html {
 .education li h3 span {
   font-size: 1.2rem;
   padding-left: 0.5rem;
+}
+
+/* 미디어쿼리 
+***************/
+@media screen and (max-width: 1428px) {
+  html {
+    min-width: 856px;
+  }
+  .home-section > div,
+  .resume-section > div {
+    width: 95%;
+  }
 }
