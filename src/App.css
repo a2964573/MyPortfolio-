@@ -281,7 +281,7 @@ html {
 .project div > ul > li:nth-child(3) span:nth-child(1) p:first-child {
   padding-top: 0;
 }
-.project div > ul > li:nth-child(3) span:nth-child(1) p > span {
+.project div > ul > li:nth-child(3) span:nth-child(1) p > span:first-child {
   font-size: 1.8rem;
   padding-bottom: 0.7rem;
   color: cornflowerblue;

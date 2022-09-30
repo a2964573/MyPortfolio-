@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Home from "./component/Home.js";
 import Resume from "./component/Resume.js";
+import data from "./data.js";
 
 function App() {
   const [mode, setMode] = useState("HOME");
@@ -9,10 +10,10 @@ function App() {
 
   switch (mode) {
     case "HOME":
-      content = <Home />;
+      content = <Home data={data} />;
       break;
     case "RESUME":
-      content = <Resume />;
+      content = <Resume data={data} />;
       break;
 
     default:
