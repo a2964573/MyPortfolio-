@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Home from "./component/Home.js";
 import Resume from "./component/Resume.js";
+import Portfolio from "./component/Portfolio.js";
 import data from "./data.js";
 
 function App() {
@@ -10,10 +11,13 @@ function App() {
 
   switch (mode) {
     case "HOME":
-      content = <Home data={data} />;
+      content = <Home data={data} mode={mode} setMode={setMode} />;
       break;
     case "RESUME":
-      content = <Resume data={data} />;
+      content = <Resume data={data} mode={mode} setMode={setMode} />;
+      break;
+    case "PORTFOLIO":
+      content = <Portfolio data={data} mode={mode} setMode={setMode} />;
       break;
 
     default:
@@ -32,7 +36,6 @@ function Navigator(props) {
   return (
     <div className="navigator">
       <ul>
-        <li>🏠</li>
         <li
           onClick={() => {
             props.setMode("HOME");
@@ -45,9 +48,13 @@ function Navigator(props) {
           }}>
           Resume
         </li>
-        <li>Portfolio</li>
+        <li
+          onClick={() => {
+            props.setMode("PORTFOLIO");
+          }}>
+          Portfolio
+        </li>
         <li>GitHub</li>
-        <li>⚙️</li>
       </ul>
     </div>
   );

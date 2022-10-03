@@ -5,19 +5,27 @@ function Home(props) {
         <div className="name">
           <span>"꿈을 향해 점진적으로 성장하는 모코코"</span>
           <h1>
-            최 규 환<span>Choi KyuHwan</span>
+            최규환<span>Choi KyuHwan</span>
           </h1>
         </div>
         <div>
           <h2 className="link-box-title">About Me</h2>
           <div className="link-box">
-            <div className="resume">
+            <div
+              className="resume"
+              onClick={() => {
+                props.setMode("RESUME");
+              }}>
               <p className="resume-icon">📜</p>
               <p>Resume</p>
               <p>웹 프론트엔드 개발직군에 지원하는 최규환입니다.</p>
               <p>장래에 풀스택 개발자가 되는 것이 희망입니다.</p>
             </div>
-            <div className="resume">
+            <div
+              className="resume"
+              onClick={() => {
+                props.setMode("PORTFOLIO");
+              }}>
               <p className="resume-icon">🗂️</p>
               <p>Portfolio</p>
               <p>웹 프론트엔드 개발직군에 지원하는 최규환입니다.</p>

@@ -103,8 +103,8 @@ function Project(props) {
           <li>
             <img
               id={`project${index}`}
-              src={`./image/${element.img}`}
-              alt={element.img}
+              src={`./image/${element.img[0]}`}
+              alt={element.img[0]}
             />
           </li>
           <li>
