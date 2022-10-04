@@ -53,8 +53,8 @@ function Data(props) {
       <div className="picture-box">
         <img
           id="picture"
-          src={`./image/${props.data.faceImg}`}
-          alt={`${props.data.faceImg}`}
+          src={`./image/${props.data.faceImg.resume}`}
+          alt={`${props.data.faceImg.resume}`}
         />
       </div>
       <div className="license">
@@ -86,7 +86,7 @@ function Introduce(props) {
       <h2>
         저를 소개합니다<span>Introduce</span>
       </h2>
-      <p>{props.data.introduce}</p>
+      <p>{props.data.introduce.detail}</p>
     </div>
   );
 }
@@ -144,9 +144,11 @@ function Project(props) {
 }
 function Skill(props) {
   let skillList = [];
-  props.data.skill.forEach((element, index) => {
-    skillList.push(<li key={index}>{element}</li>);
-  });
+  for (const key in props.data.skill) {
+    props.data.skill[key].forEach((element, index) => {
+      skillList.push(<li key={`${key}${index}`}>{element}</li>);
+    });
+  }
 
   return (
     <div className="skill LIST">

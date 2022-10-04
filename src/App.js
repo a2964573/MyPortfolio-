@@ -1,4 +1,8 @@
 import "./App.css";
+import "./style/home-style.css";
+import "./style/navigator-style.css";
+import "./style/resume-style.css";
+import "./style/portfolio-style.css";
 import { useState } from "react";
 import Home from "./component/Home.js";
 import Resume from "./component/Resume.js";

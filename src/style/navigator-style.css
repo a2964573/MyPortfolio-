@@ -1,0 +1,24 @@
+/*네비게이터
+***************/
+.navigator {
+  font-size: 1.8rem;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 99;
+}
+.navigator ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1rem 0.5rem 0.5rem #ddd;
+}
+.navigator ul li {
+  list-style: none;
+  padding: 1rem;
+  cursor: default;
+}
+.navigator ul li:hover {
+  cursor: pointer;
+}

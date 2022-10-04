@@ -1,0 +1,57 @@
+/*홈
+***************/
+.home-section > div {
+  padding-top: 4.5rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.name {
+  padding: 4rem 0;
+}
+.name h1 {
+  font-size: 3rem;
+}
+.name h1 span {
+  font-size: 1.6rem;
+  font-variant: small-caps;
+  padding-left: 0.5rem;
+}
+.name > span {
+  font-size: 1.3rem;
+}
+.link-box-title {
+  font-size: 2.3rem;
+  padding-bottom: 1.5rem;
+  font-variant: small-caps;
+}
+.link-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.link-box div:hover {
+  cursor: pointer;
+}
+.resume {
+  font-size: 1.6rem;
+  display: block;
+  outline: 0.2rem solid #333;
+  border-radius: 1.5rem;
+  width: 30%;
+  padding: 1rem;
+}
+.resume p {
+  padding: 0.5rem;
+}
+.resume-icon {
+  font-size: 2rem;
+}
+.github-icon {
+  width: 2rem;
+  height: 2rem;
+}
