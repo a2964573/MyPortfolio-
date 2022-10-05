@@ -38,7 +38,7 @@ const data = {
     },
     portfolio: {
       title: "Portfolio",
-      address: "포트폴리오 주소 예정",
+      address: "https://a2964573.github.io",
     },
     github: {
       title: "Github",
@@ -55,11 +55,20 @@ const data = {
   },
   project: [
     {
+      address: "https://github.com/a2964573/-PJ-SWRuneManage",
       title: "서머너즈워-룬관리",
       img: [
         "프로젝트_룬관리.png",
-        ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"],
+        [
+          "프로젝트_룬관리_02.png",
+          "프로젝트_룬관리_03.png",
+          "프로젝트_룬관리_04.png",
+          "프로젝트_룬관리_05.png",
+          "프로젝트_룬관리_06.png",
+          "프로젝트_룬관리_07.png",
+        ],
       ],
+      video: "프로젝트_룬관리_01.mp4",
       content: [
         {
           title: "제작 동기",
@@ -88,11 +97,19 @@ const data = {
       skill: ["html", "css", "javascript", "react"],
     },
     {
+      address: "https://github.com/a2964573/-PJ-TodoList",
       title: "To Do List",
       img: [
         "프로젝트_투두리스트.png",
-        ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"],
+        [
+          "프로젝트_투두리스트_02.png",
+          "프로젝트_투두리스트_03.png",
+          "프로젝트_투두리스트_04.png",
+          "프로젝트_투두리스트_05.png",
+          "프로젝트_투두리스트_06.png",
+        ],
       ],
+      video: "프로젝트_투두리스트_01.mp4",
       content: [
         {
           title: "제작 동기",
@@ -128,11 +145,20 @@ const data = {
       skill: ["html", "css", "javascript", "react"],
     },
     {
+      address: "https://github.com/a2964573/-Study-Calculator",
       title: "계산기",
       img: [
         "프로젝트_계산기.png",
-        ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"],
+        [
+          "프로젝트_계산기_02.png",
+          "프로젝트_계산기_03.png",
+          "프로젝트_계산기_04.png",
+          "프로젝트_계산기_05.png",
+          "프로젝트_계산기_06.png",
+          "프로젝트_계산기_07.png",
+        ],
       ],
+      video: "프로젝트_계산기_01.mp4",
       content: [
         {
           title: "제작 동기",

@@ -1,64 +1,43 @@
-import "./App.css";
 import "./style/home-style.css";
 import "./style/navigator-style.css";
 import "./style/resume-style.css";
 import "./style/portfolio-style.css";
-import { useState } from "react";
+import "./App.css";
 import Home from "./component/Home.js";
 import Resume from "./component/Resume.js";
 import Portfolio from "./component/Portfolio.js";
 import data from "./data.js";
+import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState("HOME");
-  let content;
-
-  switch (mode) {
-    case "HOME":
-      content = <Home data={data} mode={mode} setMode={setMode} />;
-      break;
-    case "RESUME":
-      content = <Resume data={data} mode={mode} setMode={setMode} />;
-      break;
-    case "PORTFOLIO":
-      content = <Portfolio data={data} mode={mode} setMode={setMode} />;
-      break;
-
-    default:
-      break;
-  }
-
   return (
     <div className="body">
-      <Navigator setMode={setMode} />
-      {content}
+      <Navigator />
+      <Routes>
+        <Route path="/" element={<Home data={data} />} />
+        <Route path="/resume" element={<Resume data={data} />} />
+        <Route path="/portfolio" element={<Portfolio data={data} />} />
+      </Routes>
     </div>
   );
 }
 
-function Navigator(props) {
+function Navigator() {
   return (
     <div className="navigator">
       <ul>
-        <li
-          onClick={() => {
-            props.setMode("HOME");
-          }}>
-          Home
-        </li>
-        <li
-          onClick={() => {
-            props.setMode("RESUME");
-          }}>
-          Resume
-        </li>
-        <li
-          onClick={() => {
-            props.setMode("PORTFOLIO");
-          }}>
-          Portfolio
-        </li>
-        <li>GitHub</li>
+        <Link to="/" className="a-tag">
+          <li>Home</li>
+        </Link>
+        <Link to="/resume" className="a-tag">
+          <li>Resume</li>
+        </Link>
+        <Link to="/portfolio" className="a-tag">
+          <li>Portfolio</li>
+        </Link>
+        <a href="https://github.com/a2964573" target={"_blank"}>
+          <li>GitHub</li>
+        </a>
       </ul>
     </div>
   );

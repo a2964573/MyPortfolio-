@@ -42,8 +42,10 @@ function Data(props) {
   for (const key in props.data.contact) {
     obj[key] = (
       <li id={key}>
-        <h3>{props.data.contact[key].address}</h3>
-        <span>{props.data.contact[key].title}</span>
+        <a href={`${props.data.contact[key].address}`} target="_blank">
+          <h3>{props.data.contact[key].address}</h3>
+          <span>{props.data.contact[key].title}</span>
+        </a>
       </li>
     );
   }

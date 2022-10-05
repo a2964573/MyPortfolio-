@@ -37,7 +37,7 @@
 .link-box div:hover {
   cursor: pointer;
 }
-.resume {
+.link {
   font-size: 1.6rem;
   display: block;
   outline: 0.2rem solid #333;
@@ -45,10 +45,14 @@
   width: 30%;
   padding: 1rem;
 }
-.resume p {
+.link p {
   padding: 0.5rem;
 }
-.resume-icon {
+.a-tag p,
+.link > a > p {
+  font-weight: bolder;
+}
+.link-icon {
   font-size: 2rem;
 }
 .github-icon {

@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function Portfolio(props) {
   const data = props.data;
   return (
@@ -48,15 +52,13 @@ function Data(props) {
         />
       </div>
       <div className="resume-contact-box">
-        <div
-          className="resume-box"
-          onClick={() => {
-            props.setMode("RESUME");
-          }}>
-          <h3>
-            {props.data.icon.resume}
-            <span>클릭시 이력서로 이동합니다.</span>
-          </h3>
+        <div className="resume-box">
+          <Link to="/resume" className="a-tag">
+            <h3>
+              {props.data.icon.resume}
+              <span>클릭시 이력서로 이동합니다.</span>
+            </h3>
+          </Link>
           {introduceList}
         </div>
         <div className="contact-box">
@@ -64,7 +66,9 @@ function Data(props) {
             <h3>{props.data.icon.contact}</h3>
             {obj.email}
             {obj.phone}
-            {obj.github}
+            <a href={`${props.data.contact.github.address}`} target="_blank">
+              {obj.github}
+            </a>
           </ul>
         </div>
       </div>
@@ -103,34 +107,73 @@ function Skill(props) {
   );
 }
 function Project(props) {
+  const arr = [];
+  for (let i = 0; i < props.data.project.length; i++) {
+    arr.push(0);
+  }
+  const [margin, setMargin] = useState(arr);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    document.querySelectorAll(".slide-image")[
+      index
+    ].style.marginLeft = `${margin[index]}%`;
+  }, [margin]);
+
   let projectList = [];
   props.data.project.forEach((element, index) => {
+    const imgLength = element.img[1].length - 1;
     projectList.push(
       <div key={index}>
         <ul>
-          <h3>
-            {element.title}
-            <span>클릭시 관련 Github로 이동합니다.</span>
-          </h3>
+          <a href={`${element.address}`} target="_blank">
+            <h3>
+              {element.title}
+              <span>클릭시 관련 Github로 이동합니다.</span>
+            </h3>
+          </a>
           <li className="slide-image-box">
-            <div className="slide-image">
-              {element.img[0].map((img, index) => {
-                return <img key={index} src={`./image/${img}`} />;
+            <div
+              className="slide-image"
+              style={{ width: `${100 * imgLength}%` }}>
+              {element.img[1].map((img, index) => {
+                return (
+                  <img
+                    key={index}
+                    style={{ width: `${100 / imgLength}%` }}
+                    src={`./image/${img}`}
+                  />
+                );
               })}
             </div>
             <div className="slide-control-box">
               <button
                 type="button"
                 onClick={() => {
-                  document.querySelector(".slide-image").style.marginLeft = "0";
+                  setIndex(index);
+                  let copy = [...margin];
+                  if (0 <= margin[index]) {
+                    copy[index] = 0;
+                    setMargin(copy);
+                  } else {
+                    copy[index] = margin[index] + 100;
+                    setMargin(copy);
+                  }
                 }}>
                 prev
               </button>
               <button
                 type="button"
                 onClick={() => {
-                  document.querySelector(".slide-image").style.marginLeft =
-                    "-100%";
+                  setIndex(index);
+                  let copy = [...margin];
+                  if (margin[index] <= -(100 * imgLength)) {
+                    copy[index] = -(100 * imgLength);
+                    setMargin(copy);
+                  } else {
+                    copy[index] = margin[index] - 100;
+                    setMargin(copy);
+                  }
                 }}>
                 next
               </button>

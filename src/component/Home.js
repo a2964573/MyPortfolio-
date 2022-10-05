@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home(props) {
   return (
     <section className="home-section">
@@ -11,29 +13,27 @@ function Home(props) {
         <div>
           <h2 className="link-box-title">About Me</h2>
           <div className="link-box">
-            <div
-              className="resume"
-              onClick={() => {
-                props.setMode("RESUME");
-              }}>
-              <p className="resume-icon">{props.data.icon.resume}</p>
-              <p>Resume</p>
+            <div className="link">
+              <Link to="/resume" className="a-tag">
+                <p className="link-icon">{props.data.icon.resume}</p>
+                <p>Resume</p>
+              </Link>
               <p>웹 프론트엔드 개발직군에 지원하는 최규환입니다.</p>
               <p>장래에 풀스택 개발자가 되는 것이 희망입니다.</p>
             </div>
-            <div
-              className="resume"
-              onClick={() => {
-                props.setMode("PORTFOLIO");
-              }}>
-              <p className="resume-icon">{props.data.icon.portfolio}</p>
-              <p>Portfolio</p>
+            <div className="link">
+              <Link to="/portfolio" className="a-tag">
+                <p className="link-icon">{props.data.icon.portfolio}</p>
+                <p>Portfolio</p>
+              </Link>
               <p>웹 프론트엔드 개발직군에 지원하는 최규환입니다.</p>
               <p>장래에 풀스택 개발자가 되는 것이 희망입니다.</p>
             </div>
-            <div className="resume">
-              <p className="resume-icon">{props.data.icon.github}</p>
-              <p>GitHub</p>
+            <div className="link">
+              <a href={`${props.data.contact.github.address}`} target="_blank">
+                <p className="link-icon">{props.data.icon.github}</p>
+                <p>GitHub</p>
+              </a>
               <p>웹 프론트엔드 개발직군에 지원하는 최규환입니다.</p>
               <p>장래에 풀스택 개발자가 되는 것이 희망입니다.</p>
             </div>

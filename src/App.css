@@ -20,6 +20,15 @@ html {
   width: 100%;
   margin: auto;
 }
+a,
+a:hover,
+a:link,
+a:active,
+a:visited .a-tag,
+.a-tag:hover {
+  color: #333;
+  text-decoration: none;
+}
 
 /* 미디어쿼리 
 ***************/
@@ -27,8 +36,9 @@ html {
   html {
     min-width: 856px;
   }
-  .home-section > div,
-  .resume-section > div {
-    width: 95%;
+  .portfolio-section > div,
+  .resume-section > div,
+  .home-section > div {
+    width: 100%;
   }
 }

@@ -83,9 +83,11 @@
 .contact-portfolio h2 {
   transform: translate(1.5rem, -1.5rem);
 }
-.license ul li,
 .contact-portfolio ul li {
   list-style: none;
+}
+.license ul li,
+.contact-portfolio ul li > a {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
