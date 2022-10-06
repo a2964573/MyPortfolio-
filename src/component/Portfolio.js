@@ -30,7 +30,7 @@ function Header(props) {
 }
 function Data(props) {
   let introduceList = [];
-  props.data.introduce.simple.forEach((element, index) => {
+  props.data.introduce.resume.forEach((element, index) => {
     introduceList.push(<p key={index}>{element}</p>);
   });
   let obj = {};

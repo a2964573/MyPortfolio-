@@ -83,12 +83,16 @@ function Data(props) {
   );
 }
 function Introduce(props) {
+  let textList = [];
+  props.data.introduce.detail.forEach((element, index) => {
+    textList.push(<p key={index}>{element}</p>);
+  });
   return (
     <div className="introduce LIST">
       <h2>
         저를 소개합니다<span>Introduce</span>
       </h2>
-      <p>{props.data.introduce.detail}</p>
+      {textList}
     </div>
   );
 }

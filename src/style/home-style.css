@@ -34,9 +34,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.link-box div:hover {
-  cursor: pointer;
-}
 .link {
   font-size: 1.6rem;
   display: block;
@@ -51,6 +48,11 @@
 .a-tag p,
 .link > a > p {
   font-weight: bolder;
+  text-transform: capitalize;
+}
+.a-tag p:hover,
+.link > a > p:hover {
+  cursor: pointer;
 }
 .link-icon {
   font-size: 2rem;
