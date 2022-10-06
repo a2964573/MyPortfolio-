@@ -73,7 +73,7 @@ const data = {
   },
   project: [
     {
-      address: "https://github.com/a2964573/-Study-Calculator",
+      address: "https://github.com/a2964573/MyPortfolio-",
       title: "포트폴리오",
       img: [
         "프로젝트_포트폴리오.png",
@@ -84,6 +84,8 @@ const data = {
           "프로젝트_포트폴리오_05.png",
           "프로젝트_포트폴리오_06.png",
           "프로젝트_포트폴리오_07.png",
+          "프로젝트_포트폴리오_08.png",
+          "프로젝트_포트폴리오_09.png",
         ],
       ],
       // video: "프로젝트_포트폴리오_01.mp4",
